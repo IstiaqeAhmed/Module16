@@ -35,7 +35,12 @@
 // var name = " istiaqe ";
 // console.log("istiaqe".length);// length er sahajje koto ti letter ache ta jana jai. 
 
-var name1 = ["istiaqe", "ahmed", "khan", "is", "the", "best"];
+
 // console.log(num.indexOf("khan"))// space count kore na array er bitor theke.
 
-}
+    var name1 = ["istiaqe", "ahmed", "khan", "is", "the", "best"];
+  if(name1.length == 5){
+      console.log(name1.length);
+  }
+  
+

@@ -22,18 +22,23 @@
 // add = num1 + num2;
 // console.log(add.toFixed(3));// .toFixed diye doshomik er pore koto ghor porjonto jabe ta dekha jabe.
 
+// largest number find from string
 
-
-
-// fibonacci series
-
-// // 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
-// function fibonacciIterative(nume){
-//     var fibo = [1, 1];
-//     for(var i = 0; i<=nume; i++){
-
-//     }
-// }
+/*function megaFriend(marks){
+    var max = [0];
+for(var i = 0; i<marks.length;i++){
+    var element = marks[i];
+    if (element.length> max.length){
+        max= element;
+    }
+   
+}
+  return max;
+ 
+}
+var total =["misitay", "istiaqe", "ahmedk", "nitailur", "favicong", "dangerous", "kihijkllssfss"];
+var result = megaFriend(total);
+console.log(result)*/
 
 // var name = "istiaqe", "ahmed" ;
 // console.log(name.length);// length er sahajje koto ti letter ache ta jana jai. 
@@ -79,19 +84,37 @@
 // }
 // console.log(max);
 
+// fibonacci series
 
-function megaFriend(marks){
-    var max = [0];
-for(var i = 0; i<marks.length;i++){
-    var element = marks[i];
-    if (element.length> max.length){
-        max= element;
+// 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+/*function fibonacciIterative(num){
+    var fibo = [ 1, 1]
+    for(var i = 2; i<= num; i++){
+            var nextFibo = fibo[i-1] + fibo [i-2];
+            fibo.push(nextFibo);
+
     }
-   
-}
-  return max;
- 
-}
-var total =["misitay", "istiaqe", "ahmedk", "nitailur", "favicong", "dangerous", "kihijkllssfss"];
-var result = megaFriend(total);
-console.log(result)
+    return fibo;
+
+}*/
+//   var result = fibonacciIterative(10);
+//  console.log(result)
+
+ // recurssive fibonacci
+
+ function fibonacciRecurssive(num){
+     //stopping condition
+     if(num == 0){
+         return [1];
+     }
+     if(num == 1){
+         return [1, 1];
+     }
+     // recurssive call
+     var fibo = fibonacciRecurssive(num-1);
+     var nextFibo = fibo[num-1] + fibo [num-2];
+     fibo.push(nextFibo);
+     return fibo;
+ }
+ var result = fibonacciRecurssive(10);
+ console.log(result)
